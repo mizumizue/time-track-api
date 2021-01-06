@@ -29,7 +29,7 @@ func (customClient *HttpCustomClient) Do(req *http.Request) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	if res.StatusCode > 299 {
+	if res.StatusCode > 399 {
 		return nil, fmt.Errorf("request error. http code: %d, status: %s", res.StatusCode, res.Status)
 	}
 	return body, nil
